@@ -1,3 +1,2 @@
-/build/
-/node_modules/
-/public/
+.history
+node_modules
