@@ -209,7 +209,7 @@
   --toc-width: calc(162/var(--rem-base)*1rem);
   --toc-width--widescreen: calc(216/var(--rem-base)*1rem);
   --doc-max-width: calc(720/var(--rem-base)*1rem);
-  --doc-max-width--desktop: calc(828/var(--rem-base)*1rem);
+  --doc-max-width--desktop: calc(990/var(--rem-base)*1rem);
   /* stacking */
   --z-index-nav: 1;
   --z-index-toolbar: 2;
@@ -1093,7 +1093,7 @@ auto;
     margin: 0
 2rem;
     margin: var(--doc-margin--desktop);
-    max-width: 46rem;
+    max-width: 55rem;
     max-width: var(--doc-max-width--desktop);
     min-width: 0;
   }
@@ -2914,7 +2914,7 @@ footer.footer {
 
 .home-link:hover,
 .home-link.is-current {
-  background-image: none;
+  background-image: url(../img/home-o.svg);
 }
 
 /* Sidebar */
