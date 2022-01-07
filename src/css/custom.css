@@ -1,0 +1,33 @@
+.navbar-logo {
+  max-height: 56px;
+  width: auto;
+}
+.navbar-brand {
+  padding-left: 48px;
+  padding-right: 40px;
+  flex: 0 0 200px;
+}
+.navbar-item {
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+#topbar-nav {
+  flex: 0 0 50%;
+}
+#subbar-nav {
+  padding-right: 48px;
+}
+.navbar .button:hover {
+  background-color: var(--color-xmr-silver);
+  border-color: var(--color-xmr-silver);
+}
+.nav-menu {
+  padding: 4rem 2rem;
+}
+.home-link:hover,
+.home-link.is-current {
+  background-image: none;
+}

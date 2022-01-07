@@ -1,4 +1,13 @@
 :root {
+  /* xmera omnia color scheme */
+  --color-xmr-darkred: #9e1030;
+  --color-xmr-silver: #a8a7a7;
+  --color-xmr-red: #e40428;
+  --color-xmr-text: #2d2d43;
+  --color-xmr-helptext: #706e6e;
+  --color-xmr-graylight: #f9f8f8;
+  --color-xmr-dark: #343232;
+  --color-xmr-lighttext: #e6e5e5;
   /* colors */
   --color-white: #fff;
   --color-smoke-10: #fefefe;
@@ -29,16 +38,16 @@
   --monospace-font-weight-bold: 500;
   /* base */
   --body-background: var(--color-white);
-  --panel-background: var(--color-smoke-30);
+  --panel-background: var(--color-xmr-graylight);
   --panel-border-color: var(--color-smoke-90);
   --scrollbar-thumb-color: var(--color-gray-10);
   /* navbar */
-  --navbar-background: var(--color-jet-80);
-  --navbar-font-color: var(--color-white);
-  --navbar_hover-background: var(--color-black);
-  --navbar-button-background: var(--color-white);
-  --navbar-button-border-color: var(--panel-border-color);
-  --navbar-button-font-color: var(--body-font-color);
+  --navbar-background: var(--color-white);
+  --navbar-font-color: var(--color-black);
+  --navbar_hover-background: var(--color-white);
+  --navbar-button-background: var(--color-xmr-darkred);
+  --navbar-button-border-color: var(--color-xmr-darkred);
+  --navbar-button-font-color: var(--color-white);
   --navbar-menu-border-color: var(--panel-border-color);
   --navbar-menu-background: var(--color-white);
   --navbar-menu-font-color: var(--body-font-color);
@@ -52,8 +61,8 @@
   --nav-panel-divider-color: var(--color-smoke-90);
   --nav-secondary-background: var(--color-smoke-70);
   /* toolbar */
-  --toolbar-background: var(--panel-background);
-  --toolbar-border-color: var(--panel-border-color);
+  --toolbar-background: var(--color-white);
+  --toolbar-border-color: transparent;
   --toolbar-font-color: var(--color-gray-70);
   --toolbar-muted-color: var(--color-gray-30);
   --page-version-menu-background: var(--color-smoke-70);
@@ -80,8 +89,8 @@
   --heading-font-weight: normal;
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --section-divider-color: var(--panel-border-color);
-  --link-font-color: #1565c0;
-  --link_hover-font-color: #104d92;
+  --link-font-color: var(--color-xmr-darkred);
+  --link_hover-font-color: var(--color-xmr-silver);
   --link_unresolved-font-color: var(--important-color);
   --abstract-background: var(--color-smoke-70);
   --abstract-font-color: var(--color-jet-20);
@@ -100,7 +109,7 @@
   --pre-border-color: var(--panel-border-color);
   --pre-annotation-font-color: var(--color-gray-50);
   --quote-background: var(--panel-background);
-  --quote-border-color: var(--color-gray-70);
+  --quote-border-color: var(--color-xmr-darkred);
   --quote-font-color: var(--color-gray-70);
   --quote-attribution-font-color: var(--color-gray-30);
   --sidebar-background: var(--color-smoke-90);
@@ -114,11 +123,11 @@
   --toc-line-height: 1.2;
   /* footer */
   --footer-line-height: var(--doc-line-height);
-  --footer-background: var(--color-smoke-90);
-  --footer-font-color: var(--color-gray-70);
+  --footer-background: var(--color-xmr-dark);
+  --footer-font-color: var(--color-xmr-lighttext);
   --footer-link-font-color: var(--color-jet-80);
   /* dimensions and positioning */
-  --navbar-height: calc(63 / var(--rem-base) * 1rem);
+  --navbar-height: 88px;/*calc(63 / var(--rem-base) * 1rem);*/
   --toolbar-height: calc(45 / var(--rem-base) * 1rem);
   --drawer-height: var(--toolbar-height);
   --body-top: var(--navbar-height);
