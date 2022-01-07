@@ -65,7 +65,7 @@
 
 .home-link:hover,
 .home-link.is-current {
-  background-image: none;
+  background-image: url(../img/home-o.svg);
 }
 
 /* Sidebar */
