@@ -103,6 +103,8 @@ module.exports = (src, dest, preview) => () => {
       .src(['css/site.css', 'css/vendor/*.css'], { ...opts, sourcemaps })
       .pipe(postcss((file) => ({ plugins: postcssPlugins, options: { file } }))),
     vfs.src('font/*.{ttf,woff*(2)}', opts),
+    // [xmera] Add font-awesome
+    vfs.src('font-awesome/**/*.{css,eot,svg,ttf,woff,woff2,otf}', opts),
     vfs.src('img/**/*.{gif,ico,jpg,png,svg}', opts).pipe(
       preview
         ? through()

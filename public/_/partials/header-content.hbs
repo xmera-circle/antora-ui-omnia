@@ -1,7 +1,10 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="{{{or site.url (or siteRootUrl siteRootPath)}}}">{{site.title}}</a>
+      <a class="navbar-item" href="/">
+        <img class="navbar-logo" src="https://xmera.de/wp-content/uploads/2021/12/cropped-xmera-logo-mit-claim-transparent.png"
+          alt="xmera Omnia Docs">
+      </a>
       {{#if env.SITE_SEARCH_PROVIDER}}
       <div class="navbar-item search hide-for-print">
         <div id="search-field" class="field">
@@ -17,9 +20,9 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href="#">Home</a>
+        <a class="navbar-item" href="#">Software</a>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Products</a>
+          <a class="navbar-link" href="#">Service</a>
           <div class="navbar-dropdown">
             <a class="navbar-item" href="#">Product A</a>
             <a class="navbar-item" href="#">Product B</a>
@@ -27,16 +30,30 @@
           </div>
         </div>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Services</a>
+          <a class="navbar-link" href="#">Downloads</a>
           <div class="navbar-dropdown">
             <a class="navbar-item" href="#">Service A</a>
             <a class="navbar-item" href="#">Service B</a>
             <a class="navbar-item" href="#">Service C</a>
           </div>
         </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Unternehmen</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="subbar-nav" class="navbar-menu">
+      <div class="navbar-end">
         <div class="navbar-item">
-          <span class="control">
+          {{> social-nav}}
+          <span class="control cta-wrap">
             <a class="button is-primary" href="#">Download</a>
+            <a class="button is-secondary" href="#">Kontakt</a>
           </span>
         </div>
       </div>
