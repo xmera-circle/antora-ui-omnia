@@ -209,7 +209,7 @@
   --toc-width: calc(162/var(--rem-base)*1rem);
   --toc-width--widescreen: calc(216/var(--rem-base)*1rem);
   --doc-max-width: calc(720/var(--rem-base)*1rem);
-  --doc-max-width--desktop: calc(828/var(--rem-base)*1rem);
+  --doc-max-width--desktop: calc(990/var(--rem-base)*1rem);
   /* stacking */
   --z-index-nav: 1;
   --z-index-toolbar: 2;
@@ -1093,7 +1093,7 @@ auto;
     margin: 0
 2rem;
     margin: var(--doc-margin--desktop);
-    max-width: 46rem;
+    max-width: 55rem;
     max-width: var(--doc-max-width--desktop);
     min-width: 0;
   }
@@ -2855,7 +2855,7 @@ footer.footer {
           flex: 0 0 200px;
 }
 
-.navbar-item {
+.main-item {
   font-size: 13px;
   line-height: 24px;
   letter-spacing: 1px;
@@ -2863,25 +2863,43 @@ footer.footer {
   font-weight: normal;
 }
 
+.navbar-item {
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
 .navbar-end > .navbar-item {
   padding-left: 0;
 }
 
-.navbar-end .navbar-link::after {
+.navbar-item .navbar-link::after {
   border-color: currentColor;
-}
-
-.navbar-link::after {
   border-width: 0 0 2px 2px;
 }
 
+.no-dropdown {
+  padding-right: 0.75rem;
+}
+
+.no-dropdown::after {
+  border: none;
+}
+
 .navbar-dropdown {
+  width: 240px;
   top: 64px;
   z-index: 99999;
   box-shadow: 0 16px 48px 0 rgba(31, 32, 68, 0.08);
   -webkit-box-shadow: 0 16px 48px 0 rgba(31, 32, 68, 0.08);
   padding: 40px 24px 16px 40px;
   border: none;
+}
+
+.navbar-dropdown .navbar-item {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .navbar-dropdown a.navbar-item:hover {
@@ -2893,8 +2911,8 @@ footer.footer {
 
 #topbar-nav {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+      -ms-flex: 0 0 62%;
+          flex: 0 0 62%;
 }
 
 #subbar-nav {
@@ -2914,7 +2932,7 @@ footer.footer {
 
 .home-link:hover,
 .home-link.is-current {
-  background-image: none;
+  background-image: url(../img/home-o.svg);
 }
 
 /* Sidebar */
@@ -2993,6 +3011,14 @@ footer.footer {
 
 #social-nav a {
   padding-right: 24px;
+  color: #000;
+  color: var(--color-black);
+}
+
+.footer-wrap #social-nav a {
+  padding-right: 24px;
+  color: #e6e5e5;
+  color: var(--footer-font-color);
 }
 
 /* Call-to-action button */
