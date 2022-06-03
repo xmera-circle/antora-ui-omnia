@@ -5,13 +5,6 @@
         <img class="navbar-logo" src="https://xmera.de/wp-content/uploads/2021/12/cropped-xmera-logo-mit-claim-transparent.png"
           alt="xmera Omnia Docs">
       </a>
-      {{#if env.SITE_SEARCH_PROVIDER}}
-      <div class="navbar-item search hide-for-print">
-        <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search the docs"{{#if page.home}} autofocus{{/if}}>
-        </div>
-      </div>
-      {{/if}}
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -49,6 +42,13 @@
           </div>
         </div>
       </div>
+      {{#if env.SITE_SEARCH_PROVIDER}}
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs" {{#if page.home}} autofocus{{/if}}>
+        </div>
+      </div>
+      {{/if}}
     </div>
     <div id="subbar-nav" class="navbar-menu">
       <div class="navbar-end">

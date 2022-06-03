@@ -2841,6 +2841,12 @@ footer.footer {
 
 /* Navbar */
 
+.navbar {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .navbar-logo {
   max-height: 36px;
   width: auto;
@@ -2911,8 +2917,8 @@ footer.footer {
 
 #topbar-nav {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 62%;
-          flex: 0 0 62%;
+      -ms-flex: 0 0 52%;
+          flex: 0 0 52%;
 }
 
 #subbar-nav {
