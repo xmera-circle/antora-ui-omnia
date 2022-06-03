@@ -1,5 +1,9 @@
 /* xmera custom css */
 /* Navbar */
+.navbar {
+  justify-content: space-between;
+}
+
 .navbar-logo {
   max-height: 36px;
   width: auto;
@@ -65,7 +69,7 @@
 }
 
 #topbar-nav {
-  flex: 0 0 62%;
+  flex: 0 0 52%;
 }
 
 #subbar-nav {
