@@ -5,13 +5,6 @@
         <img class="navbar-logo" src="https://xmera.de/wp-content/uploads/2021/12/cropped-xmera-logo-mit-claim-transparent.png"
           alt="xmera Omnia Docs">
       </a>
-      {{#if env.SITE_SEARCH_PROVIDER}}
-      <div class="navbar-item search hide-for-print">
-        <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search the docs"{{#if page.home}} autofocus{{/if}}>
-        </div>
-      </div>
-      {{/if}}
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -25,6 +18,7 @@
           <div class="navbar-dropdown">
             <a class="navbar-item" href="https://xmera.de/xmera-omnia-managementsystem/">xmera Omnia</a>
             <a class="navbar-item" href="https://xmera.de/beratungstermin/">Beratungsermin</a>
+            <a class="navbar-item" href="https://xmera.de/live-vorfuehrung/">Live Vorführung</a>
             <a class="navbar-item" href="https://xmera.de/angebot-anfordern/">Angebot anfordern</a>
           </div>
         </div>
@@ -34,6 +28,7 @@
             <a class="navbar-item" href="https://www.redmine.org/projects/redmine/boards">Community Support</a>
             <a class="navbar-item" href="https://service.xmera.de/">Enterprise Support</a>
             <a class="navbar-item" href="https://xmera.de/subskription/">Preise</a>
+            <a class="navbar-item" href="https://docs.xmera.de/">Dokumentation</a>
             <a class="navbar-item" href="https://xmera.de/isms-evaluierungsworkshop/">Evaluierungsworkshop</a>
             <a class="navbar-item" href="https://xmera.de/infoservice/">Infoservice</a>
           </div>
@@ -49,6 +44,13 @@
           </div>
         </div>
       </div>
+      {{#if env.SITE_SEARCH_PROVIDER}}
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs" {{#if page.home}} autofocus{{/if}}>
+        </div>
+      </div>
+      {{/if}}
     </div>
     <div id="subbar-nav" class="navbar-menu">
       <div class="navbar-end">
