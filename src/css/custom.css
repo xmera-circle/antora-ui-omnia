@@ -98,7 +98,8 @@
 .search-result-document-hit .search-result-highlight {
   color: var(--color-xmr-darkred);
 }
-.search-result-document-hit>a:hover {
+
+.search-result-document-hit > a:hover {
   background-color: rgba(225, 69, 90, 0.05);
 }
 
