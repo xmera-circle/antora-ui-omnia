@@ -100,7 +100,7 @@ div.search-result-document-hit .search-result-highlight {
   background: rgba(237, 143, 143, 0.1);
 }
 
-div.search-result-document-hit>a:hover {
+div.search-result-document-hit > a:hover {
   background-color: rgba(225, 69, 90, 0.05);
 }
 
