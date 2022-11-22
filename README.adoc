@@ -19,6 +19,13 @@
 :url-nvm-install: {url-nvm}#installation
 :url-source-maps: https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map
 
+== Adaptions for xmera
+
+* see CHANGELOG
+* Runs with node 16
+
+== Original README below
+
 image:{img-ci-status}[CI Status (GitLab CI), link={url-ci-pipelines}]
 
 This project is an archetype that demonstrates how to produce a UI bundle that can be used by {url-antora}[Antora] to generated a documentation site.
