@@ -2946,12 +2946,13 @@ footer.footer {
 
 /* Searching */
 
-.search-result-document-hit .search-result-highlight {
+div.search-result-document-hit .search-result-highlight {
   color: #9e1030;
   color: var(--color-xmr-darkred);
+  background: rgba(237, 143, 143, 0.1);
 }
 
-.search-result-document-hit > a:hover {
+div.search-result-document-hit>a:hover {
   background-color: rgba(225, 69, 90, 0.05);
 }
 
