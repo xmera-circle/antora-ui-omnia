@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+== 1.0.0 - 2023-06-24
+
+=== Changed
+
+* antora ui version to 4e64faffd33f4d5b9e622b3b159eac625c1b27ee of [Antora UI defaul repo](https://gitlab.com/antora/antora-ui-default/-/tree/master/)
+* color scheme and styling to the latest of xmera
+* main and footer menu
+
+=== Deleted
+
+* contact button in main menu
+* social icons in main menu
+* xing icon from social icons
+
+
 == 0.3.0 - 2022-11-22
 
 === Changed
