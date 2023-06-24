@@ -65,6 +65,15 @@
 }
 
 :root {
+  /* xmera omnia color scheme */
+  --color-xmr-darkred: #9e1030;
+  --color-xmr-silver: #a8a7a7;
+  --color-xmr-red: #e40428;
+  --color-xmr-text: #2d2d43;
+  --color-xmr-helptext: #706e6e;
+  --color-xmr-graylight: #f9f8f8;
+  --color-xmr-dark: #343232;
+  --color-xmr-lighttext: #e6e5e5;
   /* colors */
   --color-white: #fff;
   --color-smoke-10: #fefefe;
@@ -95,16 +104,16 @@
   --monospace-font-weight-bold: 500;
   /* base */
   --body-background: var(--color-white);
-  --panel-background: var(--color-smoke-30);
+  --panel-background: var(--color-xmr-graylight);
   --panel-border-color: var(--color-smoke-90);
   --scrollbar-thumb-color: var(--color-gray-10);
   /* navbar */
-  --navbar-background: var(--color-jet-80);
-  --navbar-font-color: var(--color-white);
-  --navbar_hover-background: var(--color-black);
-  --navbar-button-background: var(--color-white);
-  --navbar-button-border-color: var(--panel-border-color);
-  --navbar-button-font-color: var(--body-font-color);
+  --navbar-background: var(--color-white);
+  --navbar-font-color: var(--color-black);
+  --navbar_hover-background: var(--color-white);
+  --navbar-button-background: var(--color-xmr-darkred);
+  --navbar-button-border-color: var(--color-xmr-darkred);
+  --navbar-button-font-color: var(--color-white);
   --navbar-menu-border-color: var(--panel-border-color);
   --navbar-menu-background: var(--color-white);
   --navbar-menu-font-color: var(--body-font-color);
@@ -118,8 +127,8 @@
   --nav-panel-divider-color: var(--color-smoke-90);
   --nav-secondary-background: var(--color-smoke-70);
   /* toolbar */
-  --toolbar-background: var(--panel-background);
-  --toolbar-border-color: var(--panel-border-color);
+  --toolbar-background: var(--color-white);
+  --toolbar-border-color: transparent;
   --toolbar-font-color: var(--color-gray-70);
   --toolbar-muted-color: var(--color-gray-30);
   --page-version-menu-background: var(--color-smoke-70);
@@ -146,8 +155,8 @@
   --heading-font-weight: normal;
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --section-divider-color: var(--panel-border-color);
-  --link-font-color: #1565c0;
-  --link_hover-font-color: #104d92;
+  --link-font-color: var(--color-xmr-darkred);
+  --link_hover-font-color: var(--color-xmr-silver);
   --link_unresolved-font-color: var(--important-color);
   --abstract-background: var(--color-smoke-70);
   --abstract-font-color: var(--color-jet-20);
@@ -166,7 +175,7 @@
   --pre-border-color: var(--panel-border-color);
   --pre-annotation-font-color: var(--color-gray-50);
   --quote-background: var(--panel-background);
-  --quote-border-color: var(--color-gray-70);
+  --quote-border-color: var(--color-xmr-darkred);
   --quote-font-color: var(--color-gray-70);
   --quote-attribution-font-color: var(--color-gray-30);
   --sidebar-background: var(--color-smoke-90);
@@ -180,11 +189,11 @@
   --toc-line-height: 1.2;
   /* footer */
   --footer-line-height: var(--doc-line-height);
-  --footer-background: var(--color-smoke-90);
-  --footer-font-color: var(--color-gray-70);
+  --footer-background: var(--color-xmr-dark);
+  --footer-font-color: var(--color-xmr-lighttext);
   --footer-link-font-color: var(--color-jet-80);
   /* dimensions and positioning */
-  --navbar-height: calc(63/var(--rem-base)*1rem);
+  --navbar-height: 88px;/*calc(63 / var(--rem-base) * 1rem);*/
   --toolbar-height: calc(45/var(--rem-base)*1rem);
   --drawer-height: var(--toolbar-height);
   --body-top: var(--navbar-height);
@@ -356,7 +365,7 @@ body ::-webkit-scrollbar-thumb {
 
 .nav-container {
   position: fixed;
-  top: 3.5rem;
+  top: 88px;
   top: var(--navbar-height);
   left: 0;
   width: 100%;
@@ -392,12 +401,12 @@ body ::-webkit-scrollbar-thumb {
 }
 
 .nav {
-  background: #fafafa;
+  background: #f9f8f8;
   background: var(--nav-background);
   position: relative;
   top: 2.5rem;
   top: var(--toolbar-height);
-  height: calc(100vh - 6rem);
+  height: calc(100vh - 88px - 2.5rem);
   height: var(--nav-height);
 }
 
@@ -412,12 +421,12 @@ body ::-webkit-scrollbar-thumb {
 
 @media screen and (min-width: 1024px) {
   .nav {
-    top: 3.5rem;
+    top: 88px;
     top: var(--navbar-height);
     -webkit-box-shadow: none;
             box-shadow: none;
     position: sticky;
-    height: calc(100vh - 3.5rem);
+    height: calc(100vh - 88px);
     height: var(--nav-height--desktop);
   }
 }
@@ -540,7 +549,7 @@ html.is-clipped--nav {
 }
 
 .nav-panel-explore {
-  background: #fafafa;
+  background: #f9f8f8;
   background: var(--nav-background);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -736,10 +745,10 @@ html.is-clipped--nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #fafafa;
+  background-color: #fff;
   background-color: var(--toolbar-background);
-  -webkit-box-shadow: 0 1px 0 #e1e1e1;
-          box-shadow: 0 1px 0 #e1e1e1;
+  -webkit-box-shadow: 0 1px 0 transparent;
+          box-shadow: 0 1px 0 transparent;
   -webkit-box-shadow: 0 1px 0 var(--toolbar-border-color);
           box-shadow: 0 1px 0 var(--toolbar-border-color);
   display: -webkit-box;
@@ -753,7 +762,7 @@ html.is-clipped--nav {
       -ms-flex-pack: start;
           justify-content: flex-start;
   position: sticky;
-  top: 3.5rem;
+  top: 88px;
   top: var(--navbar-height);
   z-index: 2;
   z-index: var(--z-index-toolbar);
@@ -942,7 +951,7 @@ a + .breadcrumbs {
 .toc.sidebar .toc-menu {
   margin-right: 0.75rem;
   position: sticky;
-  top: 6rem;
+  top: calc(88px + 2.5rem);
   top: var(--toc-top);
 }
 
@@ -983,7 +992,7 @@ a + .breadcrumbs {
 }
 
 .toc.sidebar .toc-menu ul {
-  max-height: calc(100vh - 8.5rem);
+  max-height: calc(100vh - 88px - 5rem);
   max-height: var(--toc-height);
   overflow-y: auto;
   -ms-scroll-chaining: none;
@@ -1035,19 +1044,19 @@ a + .breadcrumbs {
 }
 
 .toc .toc-menu a:hover {
-  color: #1565c0;
+  color: #9e1030;
   color: var(--link-font-color);
 }
 
 .toc .toc-menu a.is-active {
-  border-left-color: #1565c0;
+  border-left-color: #9e1030;
   border-left-color: var(--link-font-color);
   color: #333;
   color: var(--doc-font-color);
 }
 
 .sidebar.toc .toc-menu a:focus {
-  background: #fafafa;
+  background: #f9f8f8;
   background: var(--panel-background);
 }
 
@@ -1193,12 +1202,12 @@ auto;
 }
 
 .doc a {
-  color: #1565c0;
+  color: #9e1030;
   color: var(--link-font-color);
 }
 
 .doc a:hover {
-  color: #104d92;
+  color: #a8a7a7;
   color: var(--link_hover-font-color);
 }
 
@@ -1225,7 +1234,7 @@ auto;
 .doc .colist > table code {
   color: #222;
   color: var(--code-font-color);
-  background: #fafafa;
+  background: #f9f8f8;
   background: var(--code-background);
   border-radius: 0.25em;
   font-size: 0.95em;
@@ -1376,7 +1385,7 @@ auto;
 .doc table.stripes-odd > tbody > tr:nth-of-type(odd),
 .doc table.stripes-even > tbody > tr:nth-of-type(even),
 .doc table.stripes-hover > tbody > tr:hover {
-  background: #fafafa;
+  background: #f9f8f8;
   background: var(--table-stripe-background);
 }
 
@@ -1438,7 +1447,7 @@ auto;
 
 .doc .admonitionblock td.content {
   padding: 1rem 1rem 0.75rem;
-  background: #fafafa;
+  background: #f9f8f8;
   background: var(--admonition-background);
   width: 100%;
   word-wrap: anywhere;
@@ -1553,9 +1562,9 @@ auto;
 
 .doc .quoteblock,
 .doc .verseblock {
-  background: #fafafa;
+  background: #f9f8f8;
   background: var(--quote-background);
-  border-left: 5px solid #5d5d5d;
+  border-left: 5px solid #9e1030;
   border-left: 5px solid var(--quote-border-color);
   color: #5d5d5d;
   color: var(--quote-font-color);
@@ -1848,7 +1857,7 @@ auto;
 .doc pre.highlight code,
 .doc .listingblock pre:not(.highlight),
 .doc .literalblock pre {
-  background: #fafafa;
+  background: #f9f8f8;
   background: var(--pre-background);
   -webkit-box-shadow: inset 0 0 1.75px #e1e1e1;
           box-shadow: inset 0 0 1.75px #e1e1e1;
@@ -2092,7 +2101,7 @@ sans-serif;
   display: inline-block;
   font-size: 0.66667rem;
   font-size: calc(12/var(--rem-base)*1rem);
-  background: #fafafa;
+  background: #f9f8f8;
   background: var(--kbd-background);
   border: 1px solid #c1c1c1;
   border: 1px solid var(--kbd-border-color);
@@ -2189,7 +2198,7 @@ nav.pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-top: 1px solid #e1e1e1;
+  border-top: 1px solid transparent;
   border-top: 1px solid var(--toolbar-border-color);
   line-height: 1;
   margin: 2rem -1rem -1rem;
@@ -2268,18 +2277,18 @@ html.is-clipped--navbar {
 }
 
 body {
-  padding-top: 3.5rem;
+  padding-top: 88px;
   padding-top: var(--navbar-height);
 }
 
 .navbar {
-  background: #191919;
+  background: #fff;
   background: var(--navbar-background);
-  color: #fff;
+  color: #000;
   color: var(--navbar-font-color);
   font-size: 0.88889rem;
   font-size: calc(16/var(--rem-base)*1rem);
-  height: 3.5rem;
+  height: 88px;
   height: var(--navbar-height);
   position: fixed;
   top: 0;
@@ -2306,7 +2315,7 @@ body {
   -ms-flex-item-align: center;
       align-self: center;
   padding: 0;
-  color: #fff;
+  color: #000;
   color: var(--navbar-font-color);
   font-size: 1.22222rem;
   font-size: calc(22/var(--rem-base)*1rem);
@@ -2370,7 +2379,7 @@ body {
 }
 
 .navbar-burger span {
-  background-color: #fff;
+  background-color: #000;
   background-color: var(--navbar-font-color);
   height: 1.5px;
   width: 1rem;
@@ -2456,13 +2465,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #fff;
+  background: #9e1030;
   background: var(--navbar-button-background);
-  border: 1px solid #e1e1e1;
+  border: 1px solid #9e1030;
   border: 1px solid var(--navbar-button-border-color);
   border-radius: 0.15rem;
   height: 1.75rem;
-  color: #222;
+  color: #fff;
   color: var(--navbar-button-font-color);
   padding: 0 0.75em;
   white-space: nowrap;
@@ -2500,7 +2509,7 @@ body {
     background: var(--navbar-menu-background);
     -webkit-box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
             box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
-    max-height: calc(100vh - 3.5rem);
+    max-height: calc(100vh - 88px);
     max-height: var(--body-min-height);
     overflow-y: auto;
     -ms-scroll-chaining: none;
@@ -2572,16 +2581,16 @@ body {
 
   .navbar-end > .navbar-item,
   .navbar-end .navbar-link {
-    color: #fff;
+    color: #000;
     color: var(--navbar-font-color);
   }
 
   .navbar-end > a.navbar-item:hover,
   .navbar-end .navbar-link:hover,
   .navbar-end .navbar-item.has-dropdown:hover .navbar-link {
-    background: #000;
+    background: #fff;
     background: var(--navbar_hover-background);
-    color: #fff;
+    color: #000;
     color: var(--navbar-font-color);
   }
 
@@ -2624,9 +2633,9 @@ body {
 }
 
 footer.footer {
-  background-color: #e1e1e1;
+  background-color: #343232;
   background-color: var(--footer-background);
-  color: #5d5d5d;
+  color: #e6e5e5;
   color: var(--footer-font-color);
   font-size: 0.83333rem;
   font-size: calc(15/var(--rem-base)*1rem);
@@ -2825,5 +2834,52 @@ footer.footer {
   .footer * {
     color: inherit;
   }
+}
+
+.navbar-logo {
+  max-height: 56px;
+  width: auto;
+}
+
+.navbar-brand {
+  padding-left: 48px;
+  padding-right: 40px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 200px;
+          flex: 0 0 200px;
+}
+
+.navbar-item {
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+#topbar-nav {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+#subbar-nav {
+  padding-right: 48px;
+}
+
+.navbar .button:hover {
+  background-color: #a8a7a7;
+  background-color: var(--color-xmr-silver);
+  border-color: #a8a7a7;
+  border-color: var(--color-xmr-silver);
+}
+
+.nav-menu {
+  padding: 4rem 2rem;
+}
+
+.home-link:hover,
+.home-link.is-current {
+  background-image: none;
 }
 /*# sourceMappingURL=site.css.map */

@@ -1,7 +1,10 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="{{{or site.url siteRootPath}}}">{{site.title}}</a>
+      <a class="navbar-item" href="/">
+        <img class="navbar-logo" src="https://xmera.de/wp-content/uploads/2021/12/cropped-xmera-logo-mit-claim-transparent.png"
+          alt="xmera Omnia Docs">
+      </a>
       {{#if env.SITE_SEARCH_PROVIDER}}
       <div class="navbar-item search hide-for-print">
         <div id="search-field" class="field">
@@ -34,6 +37,10 @@
             <a class="navbar-item" href="#">Service C</a>
           </div>
         </div>
+      </div>
+    </div>
+    <div id="subbar-nav" class="navbar-menu">
+      <div class="navbar-end">
         <div class="navbar-item">
           <span class="control">
             <a class="button is-primary" href="#">Download</a>
