@@ -1,13 +1,13 @@
 :root {
   /* xmera omnia color scheme */
-  --color-xmr-accent: #F55E2C;
-  --color-xmr-primary: #51284F;
+  --color-xmr-accent: #f55e2c;
+  --color-xmr-primary: #51284f;
   --color-xmr-silver: #a8a7a7;
   --color-xmr-text: #1a1a1a;
   --color-xmr-helptext: #706e6e;
   --color-xmr-primary-light: rgba(81, 40, 79, 0.25);
   --color-xmr-light: #e1e1e1;
-  --color-xmr-dark: #2A222A;
+  --color-xmr-dark: #2a222a;
   --color-xmr-lighttext: #e6e5e5;
   /* colors */
   --color-white: #fff;

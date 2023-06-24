@@ -130,10 +130,10 @@ div.search-result-document-hit > a:hover {
   max-width: 1248px;
 }
 
-.footer-wrap:after {
+.footer-wrap::after {
   content: "";
   display: table;
-  clear:both;
+  clear: both;
 }
 
 .headline {
@@ -141,11 +141,10 @@ div.search-result-document-hit > a:hover {
   font-size: 14px;
 }
 
-
 #footer-nav\ navbar .navbar-item {
   text-transform: none;
   font-size: 16px;
-  padding-left: 0px;
+  padding-left: 0;
 }
 
 .column {
@@ -154,6 +153,7 @@ div.search-result-document-hit > a:hover {
 }
 
 .column.right { width: 20%; }
+
 .column.middle {
   width: 20%;
 }
@@ -162,11 +162,12 @@ div.search-result-document-hit > a:hover {
   color: var(--footer-font-color);
   text-decoration: none;
 }
+
 .footer a:hover {
   color: var(--color-xmr-accent);
 }
 
-.site-info{
+.site-info {
   text-align: center;
   padding-bottom: 56px;
 }
@@ -233,6 +234,7 @@ a.button.is-secondary:hover {
 input#search-input {
   border-radius: var(--border-radius-default);
 }
+
 .navbar .button {
   border-radius: var(--border-radius-large);
 }

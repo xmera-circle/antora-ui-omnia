@@ -22,7 +22,7 @@
 == Adaptions for xmera
 
 * see CHANGELOG
-* Runs with node 16
+* Runs with node 18
 
 == Original README below
 
