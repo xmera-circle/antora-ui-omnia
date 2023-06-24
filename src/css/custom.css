@@ -17,17 +17,14 @@
 }
 
 .main-item {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 24px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   font-weight: normal;
 }
 
 .navbar-item {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 24px;
-  letter-spacing: 1px;
   font-weight: normal;
 }
 
@@ -54,8 +51,10 @@
   z-index: 99999;
   box-shadow: 0 16px 48px 0 rgba(31, 32, 68, 0.08);
   -webkit-box-shadow: 0 16px 48px 0 rgba(31, 32, 68, 0.08);
-  padding: 40px 24px 16px 40px;
+  padding: 20px 24px 16px 20px;
   border: none;
+  background-color: var(--color-xmr-light);
+  border-radius: var(--border-radius-default);
 }
 
 .navbar-dropdown .navbar-item {
@@ -64,12 +63,13 @@
 }
 
 .navbar-dropdown a.navbar-item:hover {
-  background: var(--navbar_hover-background);
-  color: var(--link_hover-font-color);
+  background: var(--color-xmr-light);
+  color: var(--color-xmr-accent);
 }
 
 #topbar-nav {
   flex: 0 0 52%;
+  justify-content: flex-end;
 }
 
 #subbar-nav {
@@ -124,43 +124,60 @@ div.search-result-document-hit > a:hover {
   padding: 0;
 }
 
-.footer-wrap {
-  padding: 96px 0;
+.footer-wrap,
+.site-info {
   margin: 0 auto;
   max-width: 1248px;
 }
 
-#footer-nav\ navbar {
-  flex: 0 0 85%;
+.footer-wrap:after {
+  content: "";
+  display: table;
+  clear:both;
 }
+
+.headline {
+  color: var(--color-xmr-accent);
+  font-size: 14px;
+}
+
 
 #footer-nav\ navbar .navbar-item {
   text-transform: none;
   font-size: 16px;
+  padding-left: 0px;
+}
+
+.column {
+  float: left;
+  width: 30%;
+}
+
+.column.right { width: 20%; }
+.column.middle {
+  width: 20%;
 }
 
 .footer a {
   color: var(--footer-font-color);
   text-decoration: none;
 }
+.footer a:hover {
+  color: var(--color-xmr-accent);
+}
 
-.footer-menu-wrap,
-.site-info,
-.footer-widget {
-  margin-left: 24px;
-  margin-right: 24px;
+.site-info{
+  text-align: center;
+  padding-bottom: 56px;
 }
 
 .footer-widget-wrap {
+  padding-top: 48px;
   padding-bottom: 48px;
 }
 
 .footer-menu-wrap {
   padding: 56px 0 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  margin-bottom: 56px;
-  display: flex;
 }
 
 /* Social Nav */
