@@ -5,9 +5,9 @@
 }
 
 .navbar-logo {
-  max-height: 36px;
+  max-height: 63px;
   width: auto;
-  margin-top: 12px;
+  margin-top: 0;
 }
 
 .navbar-brand {
@@ -96,7 +96,7 @@
 /* Searching */
 
 div.search-result-document-hit .search-result-highlight {
-  color: var(--color-xmr-darkred);
+  color: var(--color-xmr-accent);
   background: rgba(237, 143, 143, 0.1);
 }
 
@@ -205,4 +205,17 @@ a.button.is-secondary:hover {
   border-color: var(--color-xmr-light);
   box-shadow: none;
   -webkit-box-shadow: none;
+}
+
+.doc pre.highlight code,
+.doc .admonitionblock td.content,
+.doc .videoblock iframe,
+.doc .imageblock,
+.doc .quoteblock,
+.doc .verseblock,
+input#search-input {
+  border-radius: var(--border-radius-default);
+}
+.navbar .button {
+  border-radius: var(--border-radius-large);
 }
