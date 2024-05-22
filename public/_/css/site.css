@@ -3067,8 +3067,8 @@ footer.footer {
   -webkit-box-shadow: 0 16px 48px 0 rgba(31, 32, 68, 0.08);
   padding: 20px 24px 16px 20px;
   border: none;
-  background-color: #e1e1e1;
-  background-color: var(--color-xmr-light);
+  background-color: #fff;
+  background-color: var(--color-white);
   border-radius: 10px;
   border-radius: var(--border-radius-default);
 }
@@ -3079,8 +3079,8 @@ footer.footer {
 }
 
 .navbar-dropdown a.navbar-item:hover {
-  background: #e1e1e1;
-  background: var(--color-xmr-light);
+  background: #fff;
+  background: var(--color-white);
   color: #f55e2c;
   color: var(--color-xmr-accent);
 }
